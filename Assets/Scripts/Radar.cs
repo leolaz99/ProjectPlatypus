@@ -8,25 +8,34 @@ public class Radar : MonoBehaviour
     [SerializeField] GameObject radarCollider;
     [SerializeField] GameObject radarPivot;
 
+    /// <summary>
+    /// leftMaxAngle deve essere positivo
+    /// </summary>
     [SerializeField] float leftMaxAngle;
     [SerializeField] float rightMaxAngle;
-    [SerializeField] float degrees;
+
+    [SerializeField] float angularSpeed;
+    
+    Quaternion positiveRotation;
 
     void Update()
     {
         if (Input.GetKey(turnLeftKey))
         {
             radarCollider.SetActive(true);
+            positiveRotation = Quaternion.Euler(radarPivot.transform.rotation.eulerAngles.x, 
+                                                -radarPivot.transform.rotation.eulerAngles.y, 
+                                                radarPivot.transform.rotation.eulerAngles.z);
 
-            if (radarPivot.transform.rotation.eulerAngles.y >= leftMaxAngle)
-                radarPivot.transform.Rotate(Vector3.up, -degrees * Time.deltaTime);                              
+            if (positiveRotation.eulerAngles.y <= leftMaxAngle)
+                radarPivot.transform.Rotate(Vector3.down, angularSpeed * Time.deltaTime);                              
         }
 
         if (Input.GetKey(turnRightKey))
         {
             radarCollider.SetActive(true);
             if (radarPivot.transform.rotation.eulerAngles.y <= rightMaxAngle)
-                radarPivot.transform.Rotate(Vector3.up, degrees * Time.deltaTime);
+                radarPivot.transform.Rotate(Vector3.up, angularSpeed * Time.deltaTime);
         }
         
         

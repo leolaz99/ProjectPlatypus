@@ -2745,9 +2745,9 @@ MonoBehaviour:
   turnRightKey: 107
   radarCollider: {fileID: 743383596}
   radarPivot: {fileID: 861902389}
-  leftMaxAngle: -45
+  leftMaxAngle: 45
   rightMaxAngle: 45
-  degrees: 60
+  angularSpeed: 30
 --- !u!1 &1815871190
 GameObject:
   m_ObjectHideFlags: 0
