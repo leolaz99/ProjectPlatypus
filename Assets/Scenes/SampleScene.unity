@@ -2651,7 +2651,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &1760247462
 MonoBehaviour:
@@ -2714,7 +2714,7 @@ MonoBehaviour:
   turnLeftKey: 276
   turnRightKey: 275
   rb: {fileID: 1760247461}
-  speed: 5
+  speed: 7
 --- !u!114 &1760247466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2745,6 +2745,8 @@ MonoBehaviour:
   turnRightKey: 107
   radarCollider: {fileID: 743383596}
   radarPivot: {fileID: 861902389}
+  leftMaxAngle: -45
+  rightMaxAngle: 45
   degrees: 60
 --- !u!1 &1815871190
 GameObject:

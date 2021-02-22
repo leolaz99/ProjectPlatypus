@@ -6,7 +6,10 @@ public class Radar : MonoBehaviour
     [SerializeField] KeyCode turnRightKey;
     
     [SerializeField] GameObject radarCollider;
-    [SerializeField] GameObject radarPivot;   
+    [SerializeField] GameObject radarPivot;
+
+    [SerializeField] float leftMaxAngle;
+    [SerializeField] float rightMaxAngle;
     [SerializeField] float degrees;
 
     void Update()
@@ -14,24 +17,29 @@ public class Radar : MonoBehaviour
         if (Input.GetKey(turnLeftKey))
         {
             radarCollider.SetActive(true);
-            radarPivot.transform.Rotate(Vector3.up, -degrees * Time.deltaTime);        
+
+            if (radarPivot.transform.rotation.eulerAngles.y >= leftMaxAngle)
+                radarPivot.transform.Rotate(Vector3.up, -degrees * Time.deltaTime);                              
         }
 
         if (Input.GetKey(turnRightKey))
         {
             radarCollider.SetActive(true);
-            radarPivot.transform.Rotate(Vector3.up, degrees * Time.deltaTime);
+            if (radarPivot.transform.rotation.eulerAngles.y <= rightMaxAngle)
+                radarPivot.transform.Rotate(Vector3.up, degrees * Time.deltaTime);
         }
         
         
         if (Input.GetKeyUp(turnLeftKey))
         {
             radarCollider.SetActive(false);
+            radarPivot.transform.eulerAngles = new Vector3(0, 0, 0);
         }
 
         if (Input.GetKeyUp(turnRightKey))
         {
             radarCollider.SetActive(false);
+            radarPivot.transform.eulerAngles = new Vector3(0, 0, 0);
         }
     }
 }
