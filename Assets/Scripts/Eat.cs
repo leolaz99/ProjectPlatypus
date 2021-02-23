@@ -12,7 +12,8 @@ public class Eat : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Destroy(collision.gameObject);
+        if(collision.gameObject.tag == "Food")
+            Destroy(collision.gameObject);
     }
 
     void Update()
