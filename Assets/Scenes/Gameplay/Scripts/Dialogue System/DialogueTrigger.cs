@@ -6,7 +6,6 @@ public class DialogueTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Time.timeScale = 0;
         if (other.gameObject.tag == "Player")
             TriggerDialogue();
     }

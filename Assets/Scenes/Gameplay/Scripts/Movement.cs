@@ -10,19 +10,22 @@ public class Movement : MonoBehaviour
     bool canSecond = true;
 
     void Update()
-    { 
-        if (Input.GetKeyDown(key1) && canFirst == true)
+    {
+        if (DialogueManager.instance.isTalk == false)
         {
-            rb.AddForce(Vector3.forward * thrust);
-            canFirst = false;
-            canSecond = true;
-        }
+            if (Input.GetKeyDown(key1) && canFirst == true)
+            {
+                rb.AddForce(Vector3.forward * thrust);
+                canFirst = false;
+                canSecond = true;
+            }
 
-        if (Input.GetKeyDown(key2) && canSecond == true)
-        {
-            rb.AddForce(Vector3.forward * thrust);
-            canSecond = false;
-            canFirst = true;
+            if (Input.GetKeyDown(key2) && canSecond == true)
+            {
+                rb.AddForce(Vector3.forward * thrust);
+                canSecond = false;
+                canFirst = true;
+            }
         }
     }
 }

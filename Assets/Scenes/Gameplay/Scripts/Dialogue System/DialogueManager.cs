@@ -9,6 +9,9 @@ public class DialogueManager : MonoBehaviour
 	public Text nameText;
 	public Text dialogueText;
 	[SerializeField] GameObject dialoguePanel;
+	public bool isTalk = false;
+
+	public Animator animator;
 
 	private Queue<string> sentences;
 
@@ -22,7 +25,7 @@ public class DialogueManager : MonoBehaviour
 
 	public void StartDialogue(Dialogue dialogue)
 	{
-		dialoguePanel.gameObject.SetActive(true);
+		animator.SetBool("isOpen", true);
 		nameText.text = dialogue.name;
 
 		sentences.Clear();
@@ -31,6 +34,8 @@ public class DialogueManager : MonoBehaviour
 		{
 			sentences.Enqueue(sentence);
 		}
+
+		isTalk = true;
 
 		DisplayNextSentence();
 	}
@@ -60,7 +65,7 @@ public class DialogueManager : MonoBehaviour
 
 	void EndDialogue()
 	{
-		dialoguePanel.gameObject.SetActive(false);
-		Time.timeScale = 1;
+		isTalk = false;
+		animator.SetBool("isOpen", false);
 	}
 }
