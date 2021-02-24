@@ -8,7 +8,7 @@ public class DialogueManager : MonoBehaviour
 	public static DialogueManager instance;
 	public Text nameText;
 	public Text dialogueText;
-	[SerializeField] GameObject dialoguePanel;
+	[HideInInspector]
 	public bool isTalk = false;
 
 	public Animator animator;
@@ -59,7 +59,7 @@ public class DialogueManager : MonoBehaviour
 		foreach (char letter in sentence.ToCharArray())
 		{
 			dialogueText.text += letter;
-			yield return null;
+			yield return new WaitForSeconds(.05f);
 		}
 	}
 

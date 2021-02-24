@@ -785,7 +785,7 @@ GameObject:
   - component: {fileID: 514850906}
   - component: {fileID: 514850908}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Dialogue Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1198,15 +1198,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: dialogue.name
-      value: test
+      value: Spada
       objectReference: {fileID: 0}
     - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: testtesttesttesttesttesttesttesttest
+      value: Ciao brutto coglione
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: XD XD XD
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: "Questo \xE8 un dialogo"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: Cosa pensavi che fosse?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: dialogue.sentences.Array.data[4]
+      value: Clicca quel bottone un'altra volta che voglio nuotare via
       objectReference: {fileID: 0}
     - target: {fileID: 7050318652850306817, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: m_RootOrder
@@ -3201,7 +3217,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &1760247462
 MonoBehaviour:
@@ -3314,6 +3330,7 @@ MonoBehaviour:
   endPosition: -3
   submergeTime: 0.5
   emergeTime: 0.5
+  isSub: 0
 --- !u!1 &1774476557
 GameObject:
   m_ObjectHideFlags: 0
@@ -3529,16 +3546,16 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 200
     m_Alignment: 3
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Text
 --- !u!222 &1928837358
@@ -3704,7 +3721,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 1774476559}
   dialogueText: {fileID: 1928837357}
-  dialoguePanel: {fileID: 514850904}
   isTalk: 0
   animator: {fileID: 514850908}
 --- !u!4 &2051939063
