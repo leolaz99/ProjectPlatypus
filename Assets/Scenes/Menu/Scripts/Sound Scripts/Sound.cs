@@ -9,17 +9,29 @@ public enum Type
 [System.Serializable]
 public class Sound
 {
-    public string name;            //Nome da dare alla clip
+    /// <summary>
+    /// Name of the clip
+    /// </summary>
+    public string name;
 
-    public AudioClip clip;         //Clip da riprodurre
+    /// <summary>
+    /// Clip to play
+    /// </summary>
+    public AudioClip clip;
 
-    [Range(0f, 1f)]
-    public float volume;           //Volume della clip
+    /// <summary>
+    /// Check for the loop of the Clip
+    /// </summary>
+    public bool loop;
 
-    public bool loop;              //Setto se la clip deve andare in loop
+    /// <summary>
+    /// Type of the clip
+    /// </summary>
+    public Type type;
 
-    public Type type;              //Tipo di audio
-
+    /// <summary>
+    /// AudioSource of the clip
+    /// </summary>
     [HideInInspector]
     public AudioSource source;
 }

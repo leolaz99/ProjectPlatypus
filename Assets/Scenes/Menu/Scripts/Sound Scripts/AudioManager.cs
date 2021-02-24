@@ -11,11 +11,14 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     /// <param name="name"> Name of the song</param>
     /// <param name="volume"> Volume of the song </param>
-    public void Play(string name, float originalVolume, float masterVolume)
+    public void Play(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         s.source.Play();
-        s.source.volume = originalVolume * masterVolume;
+        if(s.type == Type.Music)
+            s.source.volume = PlayerPrefs.GetFloat("MusicVolume") * PlayerPrefs.GetFloat("MasterVolume");
+        else
+            s.source.volume = PlayerPrefs.GetFloat("SfxVolume") * PlayerPrefs.GetFloat("MasterVolume");
     }
 
     /// <summary>
@@ -33,12 +36,12 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     /// <param name="name"> Name of the song </param>
     /// <param name="slider"> Slider that change the volume </param>
-    public void ChangeSfxVolume(float sfxVolume, float masterVolume)
+    public void ChangeSfxVolume()
     {
         foreach (Sound s in sounds)
         {
             if(s.type == Type.SFX)
-                s.source.volume = sfxVolume * masterVolume;
+                s.source.volume = PlayerPrefs.GetFloat("SfxVolume") * PlayerPrefs.GetFloat("MasterVolume");
         }  
     }
 
@@ -47,12 +50,12 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     /// <param name="name"> Name of the song </param>
     /// <param name="slider"> Slider that change the volume </param>
-    public void ChangeMusicVolume(float MusicVolume, float masterVolume)
+    public void ChangeMusicVolume()
     {
         foreach (Sound s in sounds)
         {
             if (s.type == Type.Music)
-                s.source.volume = MusicVolume * masterVolume;
+                s.source.volume = PlayerPrefs.GetFloat("MusicVolume") * PlayerPrefs.GetFloat("MasterVolume");
         }
     }
 
@@ -72,10 +75,9 @@ public class AudioManager : MonoBehaviour
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
-            s.source.volume = s.volume;
             s.source.loop = s.loop;
         }
 
-        Play("test", PlayerPrefs.GetFloat("MusicVolume"), PlayerPrefs.GetFloat("MasterVolume"));
+        Play("test");
     }
 }
