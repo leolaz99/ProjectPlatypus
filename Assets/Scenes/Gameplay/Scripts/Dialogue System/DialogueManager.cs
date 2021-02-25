@@ -14,11 +14,13 @@ public class DialogueManager : MonoBehaviour
 	public Animator animator;
 
 	private Queue<string> sentences;
+	private Queue<string> names;
 
 	void Awake()
 	{
 		sentences = new Queue<string>();
-		
+		names = new Queue<string>();
+
 		if (instance == null)
 			instance = this;
 	}
@@ -26,13 +28,18 @@ public class DialogueManager : MonoBehaviour
 	public void StartDialogue(Dialogue dialogue)
 	{
 		animator.SetBool("isOpen", true);
-		nameText.text = dialogue.name;
 
 		sentences.Clear();
+		names.Clear();
 
 		foreach (string sentence in dialogue.sentences)
 		{
 			sentences.Enqueue(sentence);
+		}
+
+		foreach (string name in dialogue.name)
+		{
+			names.Enqueue(name);
 		}
 
 		isTalk = true;
@@ -49,8 +56,10 @@ public class DialogueManager : MonoBehaviour
 		}
 
 		string sentence = sentences.Dequeue();
+		string name = names.Dequeue();
 		StopAllCoroutines();
 		StartCoroutine(TypeSentence(sentence));
+		StartCoroutine(TypeName(name));
 	}
 
 	IEnumerator TypeSentence(string sentence)
@@ -59,6 +68,16 @@ public class DialogueManager : MonoBehaviour
 		foreach (char letter in sentence.ToCharArray())
 		{
 			dialogueText.text += letter;
+			yield return new WaitForSeconds(.05f);
+		}
+	}
+
+	IEnumerator TypeName(string name)
+	{
+		nameText.text = "";
+		foreach (char letter in name.ToCharArray())
+		{
+			nameText.text += letter;
 			yield return new WaitForSeconds(.05f);
 		}
 	}

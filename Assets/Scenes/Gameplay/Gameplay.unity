@@ -1201,6 +1201,30 @@ PrefabInstance:
       value: Spada
       objectReference: {fileID: 0}
     - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: dialogue.name.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: dialogue.name.Array.data[0]
+      value: a
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: dialogue.name.Array.data[1]
+      value: b
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: dialogue.name.Array.data[2]
+      value: c
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: dialogue.name.Array.data[3]
+      value: d
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: dialogue.name.Array.data[4]
+      value: e
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 5
       objectReference: {fileID: 0}
