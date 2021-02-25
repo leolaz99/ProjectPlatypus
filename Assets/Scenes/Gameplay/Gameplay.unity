@@ -3280,7 +3280,7 @@ MonoBehaviour:
   turnLeftKey: 276
   turnRightKey: 275
   rb: {fileID: 1760247461}
-  speed: 7
+  speed: 30
 --- !u!114 &1760247466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3330,7 +3330,6 @@ MonoBehaviour:
   endPosition: -3
   submergeTime: 0.5
   emergeTime: 0.5
-  isSub: 0
 --- !u!1 &1774476557
 GameObject:
   m_ObjectHideFlags: 0
@@ -3390,9 +3389,9 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 75
+    m_FontSize: 0
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 200
     m_Alignment: 0

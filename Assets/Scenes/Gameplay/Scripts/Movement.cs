@@ -15,14 +15,14 @@ public class Movement : MonoBehaviour
         {
             if (Input.GetKeyDown(key1) && canFirst == true)
             {
-                rb.AddForce(Vector3.forward * thrust);
+                rb.AddForce(transform.forward * thrust);
                 canFirst = false;
                 canSecond = true;
             }
 
             if (Input.GetKeyDown(key2) && canSecond == true)
             {
-                rb.AddForce(Vector3.forward * thrust);
+                rb.AddForce(transform.forward * thrust);
                 canSecond = false;
                 canFirst = true;
             }
