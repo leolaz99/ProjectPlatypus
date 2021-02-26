@@ -16,4 +16,9 @@ public class DialogueTrigger : MonoBehaviour
         powerUpManager.powerUpCounter++;
         DialogueManager.instance.StartDialogue(dialogue);
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        this.gameObject.SetActive(false);
+    }
 }

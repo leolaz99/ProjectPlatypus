@@ -2382,7 +2382,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: "Were you trying to move? First you would\nneed some paws to swim. Try
+      value: "Were you trying to move? First you would need some paws to swim. Try
         these!\r\nPoof!\r"
       objectReference: {fileID: 0}
     - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
