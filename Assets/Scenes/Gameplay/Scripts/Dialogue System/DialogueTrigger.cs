@@ -2,7 +2,8 @@
 
 public class DialogueTrigger : MonoBehaviour
 {
-	public Dialogue dialogue;
+    public Dialogue dialogue;
+    public PowerUpManager powerUpManager;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -11,7 +12,8 @@ public class DialogueTrigger : MonoBehaviour
     }
 
     public void TriggerDialogue()
-	{
-		DialogueManager.instance.StartDialogue(dialogue);
-	}
+    {
+        powerUpManager.powerUpCounter++;
+        DialogueManager.instance.StartDialogue(dialogue);
+    }
 }
