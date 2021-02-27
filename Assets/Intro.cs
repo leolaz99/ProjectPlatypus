@@ -14,6 +14,8 @@ public class Intro : MonoBehaviour
     private TextMeshProUGUI text;
     [SerializeField]
     private GameObject textObject;
+    [SerializeField]
+    DialogueManager dialogueManager;
 
     public void RemoveBlackPanel()
     {
@@ -26,6 +28,8 @@ public class Intro : MonoBehaviour
         //attiva il gameobject del pannello nero
         _blackObject.SetActive(false);
         textObject.SetActive(false);
+        PauseManager.instance.isIntroEnd = true;
+        dialogueManager.GetComponent<WaitFirstDialogue>().enabled = true;
     }
     private void FadeOut()
     {
