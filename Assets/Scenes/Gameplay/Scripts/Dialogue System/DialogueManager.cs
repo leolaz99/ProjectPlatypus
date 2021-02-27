@@ -23,7 +23,6 @@ public class DialogueManager : MonoBehaviour
 
         if (instance == null)
             instance = this;
-
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -86,6 +85,6 @@ public class DialogueManager : MonoBehaviour
     {
         isTalk = false;
         animator.SetBool("isOpen", false);
-        StartCoroutine(DialogueTrigger.instance.ShowTutorial());
+        StartCoroutine(TutorialSystem.instance.ShowTutorial());
     }
 }

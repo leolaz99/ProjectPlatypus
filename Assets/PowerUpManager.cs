@@ -33,7 +33,5 @@ public class PowerUpManager : MonoBehaviour
         {
             player.GetComponent<Attack>().enabled = true;
         }
-
-
     }
 }

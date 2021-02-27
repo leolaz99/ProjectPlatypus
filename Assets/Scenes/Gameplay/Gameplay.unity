@@ -3251,6 +3251,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2659543578961764483, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: powerUp
+      value: 
+      objectReference: {fileID: 1043249233}
+    - target: {fileID: 2659543578961764483, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: tutorialText
+      value: 
+      objectReference: {fileID: 1684802620}
+    - target: {fileID: 2659543578961764483, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: tutorialTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2659543578961764483, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: tutorialSentence
+      value: qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      objectReference: {fileID: 0}
     - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: tutorialText
       value: 
@@ -3374,7 +3390,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7119511852180996705, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7386593530430392469, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: m_Enabled
@@ -4129,6 +4145,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2659543578961764483, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: powerUp
+      value: 
+      objectReference: {fileID: 1043249233}
+    - target: {fileID: 2659543578961764483, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: tutorialText
+      value: 
+      objectReference: {fileID: 1684802620}
+    - target: {fileID: 2659543578961764483, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: tutorialTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2659543578961764483, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: tutorialSentence
+      value: aaa
+      objectReference: {fileID: 0}
     - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: tutorialText
       value: 
@@ -4783,6 +4815,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2659543578961764483, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: powerUp
+      value: 
+      objectReference: {fileID: 1043249233}
+    - target: {fileID: 2659543578961764483, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: tutorialText
+      value: 
+      objectReference: {fileID: 1684802620}
+    - target: {fileID: 2659543578961764483, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: tutorialTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2659543578961764483, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: tutorialSentence
+      value: ddd
+      objectReference: {fileID: 0}
     - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: tutorialText
       value: 
@@ -9390,6 +9438,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2659543578961764483, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: powerUp
+      value: 
+      objectReference: {fileID: 1043249233}
+    - target: {fileID: 2659543578961764483, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: tutorialText
+      value: 
+      objectReference: {fileID: 1684802620}
+    - target: {fileID: 2659543578961764483, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: tutorialTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2659543578961764483, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: tutorialSentence
+      value: sss
+      objectReference: {fileID: 0}
     - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: tutorialText
       value: 
@@ -10300,6 +10364,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2659543578961764483, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: powerUp
+      value: 
+      objectReference: {fileID: 1043249233}
+    - target: {fileID: 2659543578961764483, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: tutorialText
+      value: 
+      objectReference: {fileID: 1684802620}
+    - target: {fileID: 2659543578961764483, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: tutorialTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2659543578961764483, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: tutorialSentence
+      value: qqq
+      objectReference: {fileID: 0}
     - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: tutorialText
       value: 
@@ -10911,7 +10991,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ddddddddddddd
+  m_Text: text
 --- !u!222 &1684802621
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10998,7 +11078,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1709424246
 RectTransform:
   m_ObjectHideFlags: 0
