@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class DialogueTrigger : MonoBehaviour
 {
@@ -10,7 +10,15 @@ public class DialogueTrigger : MonoBehaviour
     public string tutorialSentence;
     public Text tutorialText;
     public float tutorialTime;
+    public static DialogueTrigger instance;
 
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
@@ -19,8 +27,11 @@ public class DialogueTrigger : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        StartCoroutine(ShowTutorial());
+        if (other.gameObject.tag == "Player")
+            Destroy(this.gameObject);
+
     }
+
 
     public IEnumerator ShowTutorial()
     {
@@ -28,9 +39,8 @@ public class DialogueTrigger : MonoBehaviour
         tutorialText.gameObject.SetActive(true);
         yield return new WaitForSeconds(tutorialTime);
         tutorialText.gameObject.SetActive(false);
-        this.gameObject.SetActive(false);
     }
-    
+
     public void TriggerDialogue()
     {
         powerUpManager.powerUpCounter++;

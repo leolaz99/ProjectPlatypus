@@ -3257,7 +3257,7 @@ PrefabInstance:
       objectReference: {fileID: 1684802620}
     - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: tutorialTime
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: dialogue.name
@@ -3273,7 +3273,7 @@ PrefabInstance:
       objectReference: {fileID: 1684802618}
     - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: tutorialSentence
-      value: otter
+      value: "\rPress Q and W alternating them to move"
       objectReference: {fileID: 0}
     - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: dialogue.name.Array.size
@@ -4134,6 +4134,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1684802620}
     - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: tutorialTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: dialogue.name
       value: Spada
       objectReference: {fileID: 0}
@@ -4785,7 +4789,7 @@ PrefabInstance:
       objectReference: {fileID: 1684802620}
     - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: tutorialTime
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: dialogue.name
@@ -4799,6 +4803,11 @@ PrefabInstance:
       propertyPath: tutorialObject
       value: 
       objectReference: {fileID: 1684802618}
+    - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: tutorialSentence
+      value: Press J and K to use the radar and find shrimps. Press G after standing
+        on top of them to eat them
+      objectReference: {fileID: 0}
     - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: dialogue.name.Array.size
       value: 5
@@ -5923,7 +5932,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.46653178, y: -0.3894647, z: 0.24002214, w: 0.7570038}
-  m_LocalPosition: {x: 4.7745476, y: 12, z: -3.040005}
+  m_LocalPosition: {x: 4.7745476, y: 12, z: -3.0400012}
   m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000001}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9386,6 +9395,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1684802620}
     - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: tutorialTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: dialogue.name
       value: Spada
       objectReference: {fileID: 0}
@@ -9397,6 +9410,10 @@ PrefabInstance:
       propertyPath: tutorialObject
       value: 
       objectReference: {fileID: 1684802618}
+    - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
+      propertyPath: tutorialSentence
+      value: 'Press SPACE to attack '
+      objectReference: {fileID: 0}
     - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: dialogue.name.Array.size
       value: 3
@@ -10289,7 +10306,7 @@ PrefabInstance:
       objectReference: {fileID: 1684802620}
     - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: tutorialTime
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: dialogue.name
@@ -10305,7 +10322,7 @@ PrefabInstance:
       objectReference: {fileID: 1684802618}
     - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: tutorialSentence
-      value: beaver
+      value: Press left and right arrows to steer
       objectReference: {fileID: 0}
     - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: dialogue.name.Array.size
@@ -10834,6 +10851,7 @@ GameObject:
   - component: {fileID: 1684802619}
   - component: {fileID: 1684802621}
   - component: {fileID: 1684802620}
+  - component: {fileID: 1684802622}
   m_Layer: 5
   m_Name: Tutorial
   m_TagString: Untagged
@@ -10855,10 +10873,10 @@ RectTransform:
   m_Father: {fileID: 1254988777}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -100}
-  m_SizeDelta: {x: -900, y: 515.83655}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -205}
+  m_SizeDelta: {x: 1400.1478, y: 327.33875}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1684802620
 MonoBehaviour:
@@ -10902,6 +10920,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1684802618}
   m_CullTransparentMesh: 0
+--- !u!114 &1684802622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684802618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 4, y: -4}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1705234521
 GameObject:
   m_ObjectHideFlags: 0
