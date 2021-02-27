@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class TutorialSystem : MonoBehaviour
@@ -18,17 +18,19 @@ public class TutorialSystem : MonoBehaviour
 
     public IEnumerator ShowTutorial()
     {
-        if(powerUp.powerUpCounter==1)
-            tutorialText.text = "q";
+        if (powerUp.powerUpCounter == 1)
+            tutorialText.text = "Alternate between Q and W to move forward";
 
         if (powerUp.powerUpCounter == 2)
-            tutorialText.text = "w";
-        
+            tutorialText.text = "Press Left Arrow and Right Arrow to steer";
+
         if (powerUp.powerUpCounter == 3)
-            tutorialText.text = "e";
-        
+            tutorialText.text = "Press J and K to use the radar to spot shrimps, when you are above them press G to eat";
+
         if (powerUp.powerUpCounter == 4)
-            tutorialText.text = "r";
+            tutorialText.text = "Press SPACE to attack";
+        if (powerUp.powerUpCounter == 4)
+            tutorialText.text = "";
 
         tutorialText.gameObject.SetActive(true);
         yield return new WaitForSeconds(tutorialTime);
