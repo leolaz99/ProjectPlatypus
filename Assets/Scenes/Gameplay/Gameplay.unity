@@ -4638,6 +4638,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3968913579217560771, guid: ed6724eb58ed6624b92591784f3d1cc6, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 7b1360b49fd6bd847803dbdc9496d34a, type: 2}
     - target: {fileID: 4616033933845701164, guid: ed6724eb58ed6624b92591784f3d1cc6, type: 3}
       propertyPath: m_Name
       value: Enemy (3)
@@ -5690,7 +5694,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: dialogue.name.Array.data[0]
-      value: PROVA
+      value: CANDY
       objectReference: {fileID: 0}
     - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: dialogue.name.Array.data[1]
@@ -7919,7 +7923,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.46653178, y: -0.3894647, z: 0.24002214, w: 0.7570038}
-  m_LocalPosition: {x: 4.7745476, y: 12, z: -2.91}
+  m_LocalPosition: {x: 4.7745476, y: 12, z: -2.9099982}
   m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000001}
   m_Children: []
   m_Father: {fileID: 0}
@@ -16016,6 +16020,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackKey: 32
   attackCollider: {fileID: 2039459674}
+  anim: {fileID: 919132147928473422}
 --- !u!114 &1760247467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16697,7 +16702,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: dialogue.name.Array.data[0]
-      value: PROVA
+      value: CANDY
       objectReference: {fileID: 0}
     - target: {fileID: 5085457588878788767, guid: 1941fded65355eb43b39eb8c3f6b0965, type: 3}
       propertyPath: dialogue.name.Array.data[1]
@@ -17150,6 +17155,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3968913579217560771, guid: ed6724eb58ed6624b92591784f3d1cc6, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 7b1360b49fd6bd847803dbdc9496d34a, type: 2}
     - target: {fileID: 4616033933845701164, guid: ed6724eb58ed6624b92591784f3d1cc6, type: 3}
       propertyPath: m_Name
       value: Enemy (2)
@@ -18122,6 +18131,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 543450651579598327}
+  - component: {fileID: 919132147928473422}
   m_Layer: 0
   m_Name: Sk_PlatypusAnimationAttack01
   m_TagString: Untagged
@@ -18129,6 +18139,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &919132147928473422
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147928473421}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c6eeea8094ba85840a969b7e8349b58c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &968199482235313895
 Transform:
   m_ObjectHideFlags: 0
