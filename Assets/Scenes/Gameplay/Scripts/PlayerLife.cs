@@ -17,7 +17,6 @@ public class PlayerLife : MonoBehaviour
             life--;
             StartCoroutine("InvulnerableTime");
         }
-
     }
 
     void Awake()
@@ -30,13 +29,20 @@ public class PlayerLife : MonoBehaviour
     {
         if (life <= 0)
         {
+            GetComponent<Movement>().enabled = false;
+            GetComponent<Turn>().enabled = false;
+            GetComponent<Radar>().enabled = false;
+            GetComponent<Eat>().enabled = false;
+            GetComponent<Attack>().enabled = false;
             transform.DOMoveY(-2, 5);
             Invoke("GameOver", 5);
         }          
     }
 
     void GameOver()
-    {
+    {   
+        AudioManager.instance.Stop("GameMusic");
+        AudioManager.instance.Play("GameOverMusic");
         SceneManager.LoadScene("Lose");
     }
 

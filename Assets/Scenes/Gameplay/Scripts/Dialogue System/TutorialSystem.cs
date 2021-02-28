@@ -29,6 +29,7 @@ public class TutorialSystem : MonoBehaviour
 
         if (powerUp.powerUpCounter == 4)
             tutorialText.text = "Press SPACE to attack";
+        
         if (powerUp.powerUpCounter == 5)
             tutorialText.text = "";
 

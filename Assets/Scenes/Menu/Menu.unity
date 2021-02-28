@@ -920,6 +920,21 @@ MonoBehaviour:
     loop: 0
     type: 0
     source: {fileID: 0}
+  - name: GameOverMusic
+    clip: {fileID: 8300000, guid: 7cff421279ddc26459c359755943b61e, type: 3}
+    loop: 1
+    type: 1
+    source: {fileID: 0}
+  - name: HappyEndingMusic
+    clip: {fileID: 8300000, guid: fcd9b4c6a30d2a7489e94b985db10ec1, type: 3}
+    loop: 1
+    type: 1
+    source: {fileID: 0}
+  - name: WinMusic
+    clip: {fileID: 8300000, guid: e22921340dd281b47a4d42436160dce1, type: 3}
+    loop: 1
+    type: 1
+    source: {fileID: 0}
 --- !u!4 &836323305
 Transform:
   m_ObjectHideFlags: 0

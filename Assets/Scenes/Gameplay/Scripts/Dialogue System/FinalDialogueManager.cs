@@ -13,10 +13,18 @@ public class FinalDialogueManager : MonoBehaviour
     void Win()
     {
         if (powerUpManager.powerUpCounter >= 5 && dialogueManager.isTalk == false && eat.foodCount < 3)
+        {
+            AudioManager.instance.Stop("GameMusic");
+            AudioManager.instance.Play("WinMusic");  
             SceneManager.LoadScene("Win");
-
+        }
+            
         if (powerUpManager.powerUpCounter >= 5 && dialogueManager.isTalk == false && eat.foodCount >= 3)
+        {     
+            AudioManager.instance.Stop("GameMusic");
+            AudioManager.instance.Play("HappyEndingMusic");
             SceneManager.LoadScene("HappyEnding");
+        }           
     }
 
     void Update()
