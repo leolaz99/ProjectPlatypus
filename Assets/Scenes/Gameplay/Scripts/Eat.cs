@@ -9,15 +9,25 @@ public class Eat : MonoBehaviour
     [SerializeField] float emergeTime;
     float initialPosition;
     bool isSub = false;
+    public int foodCount = 0;
 
-    private void OnCollisionEnter(Collision collision)
+    public PlayerLife playerLife;
+
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.gameObject.tag == "Food")
+        if (other.gameObject.tag == "Food")
         {
-            Destroy(collision.gameObject);
             AudioManager.instance.Play("EatSFX");
+            //if (PlayerLife.instance.life < 3)
+            //    PlayerLife.instance.life++;
+            //
+            //if (playerLife.life < 3)
+            //    playerLife.life++;
+
+            foodCount++;
+
+            Destroy(other.gameObject);
         }
-            
     }
 
     void Update()

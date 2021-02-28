@@ -76,4 +76,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutorialText: {fileID: 0}
   tutorialTime: 0
-  tutorialSentence: 
+  powerUp: {fileID: 0}

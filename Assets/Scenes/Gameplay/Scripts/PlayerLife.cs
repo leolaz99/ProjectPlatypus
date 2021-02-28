@@ -1,6 +1,7 @@
 ﻿using DG.Tweening;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerLife : MonoBehaviour
 {
@@ -28,7 +29,15 @@ public class PlayerLife : MonoBehaviour
     void Update()
     {
         if (life <= 0)
-            transform.DOMoveY(-2, 10);
+        {
+            transform.DOMoveY(-2, 5);
+            Invoke("GameOver", 5);
+        }          
+    }
+
+    void GameOver()
+    {
+        SceneManager.LoadScene("Lose");
     }
 
     IEnumerator InvulnerableTime()
