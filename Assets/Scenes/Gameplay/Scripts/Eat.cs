@@ -31,16 +31,14 @@ public class Eat : MonoBehaviour
         if (Input.GetKeyDown(eatKey) && isSub == false)
         {
             initialPosition = transform.position.y;
+            isSub = true;
             transform.DOMoveY(endPosition, submergeTime);
         }
 
         if (transform.position.y == endPosition)
+        {
             transform.DOMoveY(initialPosition, emergeTime);
-
-        if (transform.position.y < 0)
-            isSub = true;
-
-        if (transform.position.y >= 0)
             isSub = false;
+        }           
     }
 }
