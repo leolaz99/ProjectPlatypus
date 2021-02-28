@@ -10,21 +10,10 @@ public class PowerUpManager : MonoBehaviour
     public GameObject becco;
     public GameObject claw1;
     public GameObject claw2;
+    public static PowerUpManager instance;
 
-
-    private void Start()
+    public void PowerUp()
     {
-        powerUpCounter = 0;
-    }
-
-    private void Update()
-    {
-        if (powerUpCounter == 0)
-        {
-            blob.SetActive(true);
-            body.SetActive(false);
-        }
-
         if (powerUpCounter == 1)
         {
             blob.SetActive(false);
@@ -55,5 +44,23 @@ public class PowerUpManager : MonoBehaviour
             claw2.SetActive(true);
             player.GetComponent<Attack>().enabled = true;
         }
+    }
+
+
+    private void Start()
+    {
+        powerUpCounter = 0;
+
+        if (powerUpCounter == 0)
+        {
+            blob.SetActive(true);
+            body.SetActive(false);
+        }
+    }
+
+    void Awake()
+    {
+        if (instance == null)
+            instance = this;
     }
 }

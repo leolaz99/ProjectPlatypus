@@ -86,5 +86,7 @@ public class DialogueManager : MonoBehaviour
         isTalk = false;
         animator.SetBool("isOpen", false);
         StartCoroutine(TutorialSystem.instance.ShowTutorial());
+        PowerUpManager.instance.PowerUp();
+        Particle.instance.ps.Play();
     }
 }
