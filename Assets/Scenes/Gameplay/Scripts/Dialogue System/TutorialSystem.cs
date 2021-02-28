@@ -25,7 +25,7 @@ public class TutorialSystem : MonoBehaviour
             tutorialText.text = "Press LEFT ARROW and RIGHT ARROW to steer";
 
         if (powerUp.powerUpCounter == 3)
-            tutorialText.text = "Press SHIFT to use the radar to spot shrimps, when you are above them press G to eat\nEat a shrimp will recover one hearth\nEat at least 3 shrimps to get a surprise ";
+            tutorialText.text = "Press and hold SHIFT to use the radar to spot shrimps, when you are above them press G to eat\nEat a shrimp will recover one hearth\nEat at least 3 shrimps to get a surprise ";
 
         if (powerUp.powerUpCounter == 4)
             tutorialText.text = "Press SPACE to attack";
