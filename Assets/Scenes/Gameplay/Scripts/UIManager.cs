@@ -9,13 +9,33 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
+        if (PlayerLife.instance.life == 3)
+        {
+            heart1.gameObject.SetActive(true);
+            heart2.gameObject.SetActive(true);
+            heart3.gameObject.SetActive(true);
+        }
+
         if (PlayerLife.instance.life == 2)
+        {
+            heart1.gameObject.SetActive(true);
+            heart2.gameObject.SetActive(true);
             heart3.gameObject.SetActive(false);
+        }
 
         if (PlayerLife.instance.life == 1)
+        {
+            heart1.gameObject.SetActive(true);
             heart2.gameObject.SetActive(false);
+            heart3.gameObject.SetActive(false);
+        }
 
-        if (PlayerLife.instance.life == 0)
+        if (PlayerLife.instance.life <= 0)
+        {
             heart1.gameObject.SetActive(false);
+            heart2.gameObject.SetActive(false);
+            heart3.gameObject.SetActive(false);
+        }
+
     }
 }

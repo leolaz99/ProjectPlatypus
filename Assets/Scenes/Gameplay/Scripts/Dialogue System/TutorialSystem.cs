@@ -22,14 +22,14 @@ public class TutorialSystem : MonoBehaviour
             tutorialText.text = "Alternate between Q and W to move forward";
 
         if (powerUp.powerUpCounter == 2)
-            tutorialText.text = "Press Left Arrow and Right Arrow to steer";
+            tutorialText.text = "Press LEFT ARROW and RIGHT ARROW to steer";
 
         if (powerUp.powerUpCounter == 3)
-            tutorialText.text = "Press J and K to use the radar to spot shrimps, when you are above them press G to eat\nEat a shrimp will recover one hearth\nEat at least 3 shrimps to get a surprise ";
+            tutorialText.text = "Press SHIFT to use the radar to spot shrimps, when you are above them press G to eat\nEat a shrimp will recover one hearth\nEat at least 3 shrimps to get a surprise ";
 
         if (powerUp.powerUpCounter == 4)
             tutorialText.text = "Press SPACE to attack";
-        if (powerUp.powerUpCounter == 4)
+        if (powerUp.powerUpCounter == 5)
             tutorialText.text = "";
 
         tutorialText.gameObject.SetActive(true);

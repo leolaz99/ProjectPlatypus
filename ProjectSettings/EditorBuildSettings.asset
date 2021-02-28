@@ -6,9 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu/Menu.unity
+    guid: 59e974b0cec2d9f40bf4b7cec8f89774
+  - enabled: 1
     path: Assets/Scenes/Gameplay/Gameplay.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Menu/Menu.unity
-    guid: 59e974b0cec2d9f40bf4b7cec8f89774
+    path: Assets/Scenes/Menu/Lose.unity
+    guid: dd64d01e3e57b9d4fa5660a225c5af9b
+  - enabled: 1
+    path: Assets/Scenes/Menu/HappyEnding.unity
+    guid: c69dedadbe6d1834ba57bad77583c184
+  - enabled: 1
+    path: Assets/Scenes/Menu/Win.unity
+    guid: 3a4be54c86653cf4894ad38641efc878
   m_configObjects: {}

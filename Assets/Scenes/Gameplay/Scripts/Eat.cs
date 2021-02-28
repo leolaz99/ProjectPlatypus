@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using DG.Tweening;
+﻿using DG.Tweening;
+using UnityEngine;
 
 public class Eat : MonoBehaviour
 {
@@ -13,33 +13,34 @@ public class Eat : MonoBehaviour
 
     public PlayerLife playerLife;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.tag == "Food")
+        if (collision.gameObject.tag == "Food")
         {
+            Debug.Log("PORCODIO");
             AudioManager.instance.Play("EatSFX");
-            //if (PlayerLife.instance.life < 3)
-            //    PlayerLife.instance.life++;
-            //
-            //if (playerLife.life < 3)
-            //    playerLife.life++;
+            if (PlayerLife.instance.life < 3)
+                PlayerLife.instance.life++;
+
+            if (playerLife.life < 3)
+                playerLife.life++;
 
             foodCount++;
 
-            Destroy(other.gameObject);
+            Destroy(collision.gameObject);
         }
     }
 
     void Update()
-    {      
+    {
         if (Input.GetKeyDown(eatKey) && isSub == false)
         {
             initialPosition = transform.position.y;
-            transform.DOMoveY(endPosition, submergeTime);     
+            transform.DOMoveY(endPosition, submergeTime);
         }
-        
-        if(transform.position.y == endPosition)
-                transform.DOMoveY(initialPosition, emergeTime);
+
+        if (transform.position.y == endPosition)
+            transform.DOMoveY(initialPosition, emergeTime);
 
         if (transform.position.y < 0)
             isSub = true;
