@@ -11,19 +11,14 @@ public class Eat : MonoBehaviour
     bool isSub = false;
     public int foodCount = 0;
 
-    public PlayerLife playerLife;
-
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Food")
         {
-            Debug.Log("PORCODIO");
             AudioManager.instance.Play("EatSFX");
+            
             if (PlayerLife.instance.life < 3)
                 PlayerLife.instance.life++;
-
-            if (playerLife.life < 3)
-                playerLife.life++;
 
             foodCount++;
 

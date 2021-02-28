@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerLife : MonoBehaviour
 {
-    public uint life;
+    public int life;
     public static PlayerLife instance;
     private bool isInvincible = false;
 
