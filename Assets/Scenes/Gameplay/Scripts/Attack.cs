@@ -6,11 +6,16 @@ public class Attack : MonoBehaviour
     [SerializeField] GameObject attackCollider;
     public Animator anim;
 
+    void ColliderAttack()
+    {
+        attackCollider.SetActive(true);
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(attackKey))
         {
-            attackCollider.SetActive(true);
+            Invoke("ColliderAttack", 0.5f);
             anim.SetTrigger("IsAttack");
         }
     }
